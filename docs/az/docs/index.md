@@ -1,57 +1,55 @@
-
-{!../../../docs/missing-translation.md!}
-
-
 <p align="center">
   <a href="https://fastapi.tiangolo.com"><img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI"></a>
 </p>
 <p align="center">
-    <em>FastAPI framework, high performance, easy to learn, fast to code, ready for production</em>
+    <em>FastAPI framework, yüksək məshuldarlı, öyrənməsi asan, çevik kodlama, istifadəyə hazırdır</em>
 </p>
 <p align="center">
-<a href="https://github.com/tiangolo/fastapi/actions?query=workflow%3ATest" target="_blank">
-    <img src="https://github.com/tiangolo/fastapi/workflows/Test/badge.svg" alt="Test">
+<a href="https://github.com/fastapi/fastapi/actions?query=workflow%3ATest+event%3Apush+branch%3Amaster" target="_blank">
+    <img src="https://github.com/fastapi/fastapi/workflows/Test/badge.svg?event=push&branch=master" alt="Test">
 </a>
-<a href="https://codecov.io/gh/tiangolo/fastapi" target="_blank">
-    <img src="https://img.shields.io/codecov/c/github/tiangolo/fastapi?color=%2334D058" alt="Coverage">
+<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/fastapi/fastapi" target="_blank">
+    <img src="https://coverage-badge.samuelcolvin.workers.dev/fastapi/fastapi.svg" alt="Əhatə">
 </a>
 <a href="https://pypi.org/project/fastapi" target="_blank">
-    <img src="https://img.shields.io/pypi/v/fastapi?color=%2334D058&label=pypi%20package" alt="Package version">
+    <img src="https://img.shields.io/pypi/v/fastapi?color=%2334D058&label=pypi%20package" alt="Paket versiyası">
+</a>
+<a href="https://pypi.org/project/fastapi" target="_blank">
+    <img src="https://img.shields.io/pypi/pyversions/fastapi.svg?color=%2334D058" alt="Dəstəklənən Python versiyaları">
 </a>
 </p>
 
 ---
 
-**Documentation**: <a href="https://fastapi.tiangolo.com" target="_blank">https://fastapi.tiangolo.com</a>
+**Sənədlər**: <a href="https://fastapi.tiangolo.com" target="_blank">https://fastapi.tiangolo.com</a>
 
-**Source Code**: <a href="https://github.com/tiangolo/fastapi" target="_blank">https://github.com/tiangolo/fastapi</a>
+**Qaynaq Kodu**: <a href="https://github.com/fastapi/fastapi" target="_blank">https://github.com/fastapi/fastapi</a>
 
 ---
 
-FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.
+FastAPI Python ilə API yaratmaq üçün standart Python <abbr title="Tip Məsləhətləri: Type Hints">tip məsləhətlərinə</abbr> əsaslanan, müasir, sürətli (yüksək performanslı) framework-dür.
 
-The key features are:
+Əsas xüsusiyyətləri bunlardır:
 
-* **Fast**: Very high performance, on par with **NodeJS** and **Go** (thanks to Starlette and Pydantic). [One of the fastest Python frameworks available](#performance).
+* **Sürətli**: Çox yüksək performans, **NodeJS** və **Go** səviyyəsində (Starlette və Pydantic-ə təşəkkürlər). [Ən sürətli Python frameworklərindən biridir](#performans).
+* **Çevik kodlama**: Funksiyanallıqları inkişaf etdirmək sürətini təxminən 200%-dən 300%-ə qədər artırın. *
+* **Daha az xəta**: İnsan (developer) tərəfindən törədilən səhvlərin təxminən 40% -ni azaldın. *
+* **İntuitiv**: Əla redaktor dəstəyi. Hər yerdə <abbr title="auto-complete, autocompletion, IntelliSense olaraq da bilinir">otomatik tamamlama</abbr>. Xətaları müəyyənləşdirməyə daha az vaxt sərf edəcəksiniz.
+* **Asan**: İstifadəsi və öyrənilməsi asan olması üçün nəzərdə tutulmuşdur. Sənədləri oxumaq üçün daha az vaxt ayıracaqsınız.
+* **Qısa**: Kod təkrarlanmasını minimuma endirin. Hər bir parametr tərifində birdən çox xüsusiyyət ilə və daha az səhvlə qarşılaşacaqsınız.
+* **Güclü**: Avtomatik və interaktiv sənədlərlə birlikdə istifadəyə hazır kod əldə edə bilərsiniz.
+* **Standartlara əsaslanan**: API-lar üçün açıq standartlara əsaslanır (və tam uyğun gəlir): <a href="https://github.com/OAI/OpenAPI-Specification" class="external-link" target="_blank">OpenAPI</a> (əvvəlki adı ilə Swagger) və <a href="https://json-schema.org/" class="external-link" target="_blank">JSON Schema</a>.
 
-* **Fast to code**: Increase the speed to develop features by about 200% to 300%. *
-* **Fewer bugs**: Reduce about 40% of human (developer) induced errors. *
-* **Intuitive**: Great editor support. <abbr title="also known as auto-complete, autocompletion, IntelliSense">Completion</abbr> everywhere. Less time debugging.
-* **Easy**: Designed to be easy to use and learn. Less time reading docs.
-* **Short**: Minimize code duplication. Multiple features from each parameter declaration. Fewer bugs.
-* **Robust**: Get production-ready code. With automatic interactive documentation.
-* **Standards-based**: Based on (and fully compatible with) the open standards for APIs: <a href="https://github.com/OAI/OpenAPI-Specification" class="external-link" target="_blank">OpenAPI</a> (previously known as Swagger) and <a href="https://json-schema.org/" class="external-link" target="_blank">JSON Schema</a>.
+<small>* Bu fikirlər daxili development komandasının hazırladıqları məhsulların sınaqlarına əsaslanır.</small>
 
-<small>* estimation based on tests on an internal development team, building production applications.</small>
-
-## Sponsors
+## Sponsorlar
 
 <!-- sponsors -->
 
 {% if sponsors %}
 {% for sponsor in sponsors.gold -%}
 <a href="{{ sponsor.url }}" target="_blank" title="{{ sponsor.title }}"><img src="{{ sponsor.img }}" style="border-radius:15px"></a>
-{% endfor -%}
+{% endfor -%}`
 {%- for sponsor in sponsors.silver -%}
 <a href="{{ sponsor.url }}" target="_blank" title="{{ sponsor.title }}"><img src="{{ sponsor.img }}" style="border-radius:15px"></a>
 {% endfor %}
@@ -59,66 +57,70 @@ The key features are:
 
 <!-- /sponsors -->
 
-<a href="https://fastapi.tiangolo.com/fastapi-people/#sponsors" class="external-link" target="_blank">Other sponsors</a>
+<a href="https://fastapi.tiangolo.com/az/fastapi-people/#sponsors" class="external-link" target="_blank">Digər sponsorlar</a>
 
-## Opinions
+## Rəylər
 
-"_[...] I'm using **FastAPI** a ton these days. [...] I'm actually planning to use it for all of my team's **ML services at Microsoft**. Some of them are getting integrated into the core **Windows** product and some **Office** products._"
+"_[...] Son günlərdə **FastAPI**-ı çox istifadə edirəm. [...]  Əslində onu komandamın bütün **Microsoftda ML sevislərində** istifadə etməyi planlayıram. Onların bəziləri **windows**-un əsas məhsuluna və bəzi **Office** məhsullarına inteqrasiya olunurlar._"
 
-<div style="text-align: right; margin-right: 10%;">Kabir Khan - <strong>Microsoft</strong> <a href="https://github.com/tiangolo/fastapi/pull/26" target="_blank"><small>(ref)</small></a></div>
+<div style="text-align: right; margin-right: 10%;">Kabir Khan - <strong>Microsoft</strong> <a href="https://github.com/fastapi/fastapi/pull/26" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"_We adopted the **FastAPI** library to spawn a **REST** server that can be queried to obtain **predictions**. [for Ludwig]_"
+"_**FastAPI** kitabxanasını **Proqnozlar** əldə etmək üçün sorğulana bilən **REST** serverini yaratmaqda istifadə etdik._"
 
 <div style="text-align: right; margin-right: 10%;">Piero Molino, Yaroslav Dudin, and Sai Sumanth Miryala - <strong>Uber</strong> <a href="https://eng.uber.com/ludwig-v0-2/" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"_**Netflix** is pleased to announce the open-source release of our **crisis management** orchestration framework: **Dispatch**! [built with **FastAPI**]_"
+"_**Netflix** **böhran idarəçiliyi** orkestrləşmə framework-nün açıq qaynaqlı buraxılışını elan etməkdən məmnundur: **Dispatch**! [**FastAPI** ilə quruldu]_"
 
 <div style="text-align: right; margin-right: 10%;">Kevin Glisson, Marc Vilanova, Forest Monsen - <strong>Netflix</strong> <a href="https://netflixtechblog.com/introducing-dispatch-da4b8a2a8072" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"_I’m over the moon excited about **FastAPI**. It’s so fun!_"
+"_**FastAPI** üçün həyəcanlıyam. Çox əyləncəlidir!_"
 
 <div style="text-align: right; margin-right: 10%;">Brian Okken - <strong><a href="https://pythonbytes.fm/episodes/show/123/time-to-right-the-py-wrongs?time_in_sec=855" target="_blank">Python Bytes</a> podcast host</strong> <a href="https://twitter.com/brianokken/status/1112220079972728832" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"_Honestly, what you've built looks super solid and polished. In many ways, it's what I wanted **Hug** to be - it's really inspiring to see someone build that._"
+"_Düzünü desəm, sizin qurduğunuz şey həqiqətən möhkəm və peşəkar görünür. Bir çox cəhətdən **Hug**-un olmasını istədiyim kimdir - kiminsə belə bir şey qurduğunu görmək həqiqətən ruhlandırıcıdır._"
 
-<div style="text-align: right; margin-right: 10%;">Timothy Crosley - <strong><a href="https://www.hug.rest/" target="_blank">Hug</a> creator</strong> <a href="https://news.ycombinator.com/item?id=19455465" target="_blank"><small>(ref)</small></a></div>
+<div style="text-align: right; margin-right: 10%;">Timothy Crosley - <strong><a href="https://github.com/hugapi/hug" target="_blank">Hug</a> creator</strong> <a href="https://news.ycombinator.com/item?id=19455465" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"_If you're looking to learn one **modern framework** for building REST APIs, check out **FastAPI** [...] It's fast, easy to use and easy to learn [...]_"
+"_Əgər REST API-lər yaratmaq üçün **müasir framework** öyrənmək istəyirsinizsə, **FastAPI**-a baxın [...] Sürətli, istifadəsi və öyrənməsi asandır. [...]_"
 
-"_We've switched over to **FastAPI** for our **APIs** [...] I think you'll like it [...]_"
+"_**API** xidmətlərimizi **FastAPI**-a köçürdük [...] Sizin də bəyənəcəyinizi düşünürük._"
 
 <div style="text-align: right; margin-right: 10%;">Ines Montani - Matthew Honnibal - <strong><a href="https://explosion.ai" target="_blank">Explosion AI</a> founders - <a href="https://spacy.io" target="_blank">spaCy</a> creators</strong> <a href="https://twitter.com/_inesmontani/status/1144173225322143744" target="_blank"><small>(ref)</small></a> - <a href="https://twitter.com/honnibal/status/1144031421859655680" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-## **Typer**, the FastAPI of CLIs
+"_Python ilə istifadəyə hazır API qurmaq istəyən hər kəsə **FastAPI**-ı tövsiyə edirəm. **Möhtəşəm şəkildə dizayn edilmiş**, **istifadəsi asan** və **yüksək dərəcədə genişlənə bilən**-dir, API əsaslı inkişaf strategiyamızın **əsas komponentinə** çevrilib və Virtual TAC Engineer kimi bir çox avtomatlaşdırma və servisləri idarə edir._"
+
+<div style="text-align: right; margin-right: 10%;">Deon Pillsbury - <strong>Cisco</strong> <a href="https://www.linkedin.com/posts/deonpillsbury_cisco-cx-python-activity-6963242628536487936-trAp/" target="_blank"><small>(ref)</small></a></div>
+
+---
+
+## **Typer**, CLI-ların FastAPI-ı
 
 <a href="https://typer.tiangolo.com" target="_blank"><img src="https://typer.tiangolo.com/img/logo-margin/logo-margin-vector.svg" style="width: 20%;"></a>
 
-If you are building a <abbr title="Command Line Interface">CLI</abbr> app to be used in the terminal instead of a web API, check out <a href="https://typer.tiangolo.com/" class="external-link" target="_blank">**Typer**</a>.
+Əgər siz veb API əvəzinə terminalda istifadə ediləcək <abbr title="Command Line Interface">CLI</abbr> proqramı qurursunuzsa, <a href="https://typer.tiangolo.com/" class="external-link" target="_blank">**Typer**</a>-a baxa bilərsiniz.
 
-**Typer** is FastAPI's little sibling. And it's intended to be the **FastAPI of CLIs**. ⌨️ 🚀
+**Typer** FastAPI-ın kiçik qardaşıdır. Və o, CLI-lərin **FastAPI**-ı olmaq üçün nəzərdə tutulub. ⌨️ 🚀
 
-## Requirements
+## Tələblər
 
-Python 3.7+
+FastAPI nəhənglərin çiyinlərində dayanır:
 
-FastAPI stands on the shoulders of giants:
+* Web tərəfi üçün <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a>.
+* Data tərəfi üçün <a href="https://docs.pydantic.dev/" class="external-link" target="_blank">Pydantic</a>.
 
-* <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a> for the web parts.
-* <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic</a> for the data parts.
-
-## Installation
+## Quraşdırma
 
 <div class="termy">
 
@@ -130,7 +132,7 @@ $ pip install fastapi
 
 </div>
 
-You will also need an ASGI server, for production such as <a href="https://www.uvicorn.org" class="external-link" target="_blank">Uvicorn</a> or <a href="https://gitlab.com/pgjones/hypercorn" class="external-link" target="_blank">Hypercorn</a>.
+Tətbiqimizi əlçatan etmək üçün bizə <a href="https://www.uvicorn.org" class="external-link" target="_blank">Uvicorn</a> və ya <a href="https://github.com/pgjones/hypercorn" class="external-link" target="_blank">Hypercorn</a> kimi ASGI server lazımdır.
 
 <div class="termy">
 
@@ -142,14 +144,14 @@ $ pip install "uvicorn[standard]"
 
 </div>
 
-## Example
+## Nümunə
 
-### Create it
+### Kodu yaradaq
 
-* Create a file `main.py` with:
+* `main.py` adlı fayl yaradaq və ona aşağıdakı kodu yerləşdirək:
 
 ```Python
-from typing import Optional
+from typing import Union
 
 from fastapi import FastAPI
 
@@ -162,17 +164,17 @@ def read_root():
 
 
 @app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
+def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 ```
 
 <details markdown="1">
-<summary>Or use <code>async def</code>...</summary>
+<summary>Və ya <code>async def</code>...</summary>
 
-If your code uses `async` / `await`, use `async def`:
+Əgər kodunuzda `async` və ya `await` vardırsa `async def` istifadə edə bilərik:
 
 ```Python hl_lines="9  14"
-from typing import Optional
+from typing import Union
 
 from fastapi import FastAPI
 
@@ -185,19 +187,19 @@ async def read_root():
 
 
 @app.get("/items/{item_id}")
-async def read_item(item_id: int, q: Optional[str] = None):
+async def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 ```
 
-**Note**:
+**Qeyd**:
 
-If you don't know, check the _"In a hurry?"_ section about <a href="https://fastapi.tiangolo.com/async/#in-a-hurry" target="_blank">`async` and `await` in the docs</a>.
+Əgər bu mövzu haqqında məlumatınız yoxdursa <a href="https://fastapi.tiangolo.com/az/async/#in-a-hurry" target="_blank">`async` və `await` sənədindəki</a> _"Tələsirsən?"_ bölməsinə baxa bilərsiniz.
 
 </details>
 
-### Run it
+### Kodu işə salaq
 
-Run the server with:
+Serveri aşağıdakı əmr ilə işə salaq:
 
 <div class="termy">
 
@@ -214,57 +216,57 @@ INFO:     Application startup complete.
 </div>
 
 <details markdown="1">
-<summary>About the command <code>uvicorn main:app --reload</code>...</summary>
+<summary><code>uvicorn main:app --reload</code> əmri haqqında...</summary>
 
-The command `uvicorn main:app` refers to:
+`uvicorn main:app` əmri aşağıdakılara instinad edir:
 
-* `main`: the file `main.py` (the Python "module").
-* `app`: the object created inside of `main.py` with the line `app = FastAPI()`.
-* `--reload`: make the server restart after code changes. Only do this for development.
+* `main`: `main.py` faylı (yəni Python "modulu").
+* `app`: `main.py` faylında `app = FastAPI()` sətrində yaratdığımız `FastAPI` obyektidir.
+* `--reload`: kod dəyişikliyindən sonra avtomatik olaraq serveri yenidən işə salır. Bu parametrdən yalnız development mərhələsində istifadə etməliyik.
 
 </details>
 
-### Check it
+### İndi yoxlayaq
 
-Open your browser at <a href="http://127.0.0.1:8000/items/5?q=somequery" class="external-link" target="_blank">http://127.0.0.1:8000/items/5?q=somequery</a>.
+Bu linki brauzerimizdə açaq <a href="http://127.0.0.1:8000/items/5?q=somequery" class="external-link" target="_blank">http://127.0.0.1:8000/items/5?q=somequery</a>.
 
-You will see the JSON response as:
+Aşağıdakı kimi bir JSON cavabı görəcəksiniz:
 
 ```JSON
 {"item_id": 5, "q": "somequery"}
 ```
 
-You already created an API that:
+Siz artıq bir API yaratmısınız, hansı ki:
 
-* Receives HTTP requests in the _paths_ `/` and `/items/{item_id}`.
-* Both _paths_ take `GET` <em>operations</em> (also known as HTTP _methods_).
-* The _path_ `/items/{item_id}` has a _path parameter_ `item_id` that should be an `int`.
-* The _path_ `/items/{item_id}` has an optional `str` _query parameter_ `q`.
+* `/` və `/items/{item_id}` <abbr title="Yol: Path ">_yollarında_</abbr> HTTP sorğularını qəbul edir.
+* Hər iki _yolda_ `GET` <em>əməliyyatlarını</em> (həmçinin HTTP _metodları_ kimi bilinir) aparır.
+* `/items/{item_id}` _yolu_ `item_id` adlı `int` qiyməti almalı olan _yol parametrinə_ sahibdir.
+* `/items/{item_id}` _yolunun_ `q` adlı yol parametri var və bu parametr istəyə bağlı olsa da, `str` qiymətini almalıdır.
 
-### Interactive API docs
+### İnteraktiv API Sənədləri
 
-Now go to <a href="http://127.0.0.1:8000/docs" class="external-link" target="_blank">http://127.0.0.1:8000/docs</a>.
+İndi <a href="http://127.0.0.1:8000/docs" class="external-link" target="_blank">http://127.0.0.1:8000/docs</a> ünvanına daxil olun.
 
-You will see the automatic interactive API documentation (provided by <a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank">Swagger UI</a>):
+Avtomatik interaktiv API sənədlərini görəcəksiniz (<a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank">Swagger UI</a> tərəfindən təmin edilir):
 
 ![Swagger UI](https://fastapi.tiangolo.com/img/index/index-01-swagger-ui-simple.png)
 
-### Alternative API docs
+### Alternativ API sənədləri
 
-And now, go to <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a>.
+İndi isə <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a> ünvanına daxil olun.
 
-You will see the alternative automatic documentation (provided by <a href="https://github.com/Rebilly/ReDoc" class="external-link" target="_blank">ReDoc</a>):
+<a href="https://github.com/Rebilly/ReDoc" class="external-link" target="_blank">ReDoc</a> tərəfindən təqdim edilən avtomatik sənədləri görəcəksiniz:
 
 ![ReDoc](https://fastapi.tiangolo.com/img/index/index-02-redoc-simple.png)
 
-## Example upgrade
+## Nümunəni Yeniləyək
 
-Now modify the file `main.py` to receive a body from a `PUT` request.
+İndi gəlin `main.py` faylını `PUT` sorğusu ilə birlikdə <abbr title="Gövdə: Body ">gövdə</abbr> qəbul edəcək şəkildə dəyişdirək.
 
-Declare the body using standard Python types, thanks to Pydantic.
+Pydantic sayəsində standart Python tiplərindən istifadə edərək <abbr title="Gövdə: Body ">gövdə</abbr>ni müəyyən edək.
 
 ```Python hl_lines="4  9-12  25-27"
-from typing import Optional
+from typing import Union
 
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -275,7 +277,7 @@ app = FastAPI()
 class Item(BaseModel):
     name: str
     price: float
-    is_offer: Optional[bool] = None
+    is_offer: Union[bool, None] = None
 
 
 @app.get("/")
@@ -284,7 +286,7 @@ def read_root():
 
 
 @app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
+def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 
 
@@ -292,175 +294,174 @@ def read_item(item_id: int, q: Optional[str] = None):
 def update_item(item_id: int, item: Item):
     return {"item_name": item.name, "item_id": item_id}
 ```
+Server avtomatik olaraq yenidən işə salınmalı idi (çünki biz yuxarıda `uvicorn` əmri ilə `--reload` parametrindən istifadə etmişik).
 
-The server should reload automatically (because you added `--reload` to the `uvicorn` command above).
+### İnteraktiv API sənədlərindəki dəyişikliyə baxaq
 
-### Interactive API docs upgrade
+Yenidən <a href="http://127.0.0.1:8000/docs" class="external-link" target="_blank">http://127.0.0.1:8000/docs</a> ünvanına daxil olun.
 
-Now go to <a href="http://127.0.0.1:8000/docs" class="external-link" target="_blank">http://127.0.0.1:8000/docs</a>.
-
-* The interactive API documentation will be automatically updated, including the new body:
+* İnteraktiv API sənədləri yeni gövdə də daxil olmaq ilə avtomatik olaraq yenilənəcək:
 
 ![Swagger UI](https://fastapi.tiangolo.com/img/index/index-03-swagger-02.png)
 
-* Click on the button "Try it out", it allows you to fill the parameters and directly interact with the API:
+* "Try it out" düyməsini klikləyin, bu, parametrləri doldurmağa və API ilə birbaşa əlaqə saxlamağa imkan verir:
 
 ![Swagger UI interaction](https://fastapi.tiangolo.com/img/index/index-04-swagger-03.png)
 
-* Then click on the "Execute" button, the user interface will communicate with your API, send the parameters, get the results and show them on the screen:
+* Sonra "Execute" düyməsini klikləyin, istifadəçi interfeysi API ilə əlaqə quracaq, parametrləri göndərəcək, nəticələri əldə edəcək və onları ekranda göstərəcək:
 
 ![Swagger UI interaction](https://fastapi.tiangolo.com/img/index/index-05-swagger-04.png)
 
-### Alternative API docs upgrade
+### Alternativ API Sənədlərindəki Dəyişikliyə Baxaq
 
-And now, go to <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a>.
+İndi isə yenidən <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a> ünvanına daxil olun.
 
-* The alternative documentation will also reflect the new query parameter and body:
+* Alternativ sənədlər həm də yeni sorğu parametri və gövdəsini əks etdirəcək:
 
 ![ReDoc](https://fastapi.tiangolo.com/img/index/index-06-redoc-02.png)
 
-### Recap
+### Xülasə
 
-In summary, you declare **once** the types of parameters, body, etc. as function parameters.
+Ümumiləşdirsək, parametrlər, gövdə və s. Biz məlumat növlərini **bir dəfə** funksiya parametrləri kimi təyin edirik.
 
-You do that with standard modern Python types.
+Bunu standart müasir Python tipləri ilə edirsiniz.
 
-You don't have to learn a new syntax, the methods or classes of a specific library, etc.
+Yeni sintaksis, müəyyən bir kitabxananın metodlarını və ya siniflərini və s. öyrənmək məcburiyyətində deyilsiniz.
 
-Just standard **Python 3.6+**.
+Sadəcə standart **Python**.
 
-For example, for an `int`:
+Məsələn, `int` üçün:
 
 ```Python
 item_id: int
 ```
 
-or for a more complex `Item` model:
+və ya daha mürəkkəb `Item` modeli üçün:
 
 ```Python
 item: Item
 ```
 
-...and with that single declaration you get:
+...və yalnız parametr tipini təyin etməklə bunları əldə edirsiniz:
 
-* Editor support, including:
-    * Completion.
-    * Type checks.
-* Validation of data:
-    * Automatic and clear errors when the data is invalid.
-    * Validation even for deeply nested JSON objects.
-* <abbr title="also known as: serialization, parsing, marshalling">Conversion</abbr> of input data: coming from the network to Python data and types. Reading from:
+* Redaktor dəstəyi ilə:
+    * Avtomatik tamamlama.
+    * Tip yoxlanması.
+* Məlumatların Təsdiqlənməsi:
+    * Məlumat etibarsız olduqda avtomatik olaraq aydın xətalar göstərir.
+    * Hətta çox dərin JSON obyektlərində belə doğrulama aparır.
+* Daxil olan məlumatları <abbr title="Çevrilmə: serialization, parsing, marshalling olaraq da bilinir">çevirmək</abbr> üçün aşağıdakı məlumat növlərindən istifadə edilir:
     * JSON.
-    * Path parameters.
-    * Query parameters.
-    * Cookies.
-    * Headers.
-    * Forms.
-    * Files.
-* <abbr title="also known as: serialization, parsing, marshalling">Conversion</abbr> of output data: converting from Python data and types to network data (as JSON):
-    * Convert Python types (`str`, `int`, `float`, `bool`, `list`, etc).
-    * `datetime` objects.
-    * `UUID` objects.
-    * Database models.
-    * ...and many more.
-* Automatic interactive API documentation, including 2 alternative user interfaces:
+    * <abbr title="Yol: Path">Yol</abbr> parametrləri.
+    * <abbr title="Sorğu: Query">Sorğu</abbr> parametrləri.
+    * <abbr title="Çərəz: Cookie">Çərəzlər</abbr>.
+    * <abbr title="Başlıq: Header">Başlıqlaq</abbr>.
+    * <abbr title="Forma: Form">Formalar</abbr>.
+    * Fayllar.
+* Daxil olan məlumatları <abbr title="Çevrilmə: serialization, parsing, marshalling olaraq da bilinir">çevirmək</abbr> üçün aşağıdakı məlumat növlərindən istifadə edilir (JSON olaraq):
+    * Python tiplərinin (`str`, `int`, `float`, `bool`, `list`, və s) çevrilməsi.
+    * `datetime` obyektləri.
+    * `UUID` obyektləri.
+    * Verilənlər bazası modelləri.
+    * və daha çoxu...
+* 2 alternativ istifadəçi interfeysi daxil olmaqla avtomatik interaktiv API sənədlərini təmin edir:
     * Swagger UI.
     * ReDoc.
 
 ---
 
-Coming back to the previous code example, **FastAPI** will:
+Gəlin əvvəlki nümunəyə qayıdaq və **FastAPI**-nin nələr edəcəyinə nəzər salaq:
 
-* Validate that there is an `item_id` in the path for `GET` and `PUT` requests.
-* Validate that the `item_id` is of type `int` for `GET` and `PUT` requests.
-    * If it is not, the client will see a useful, clear error.
-* Check if there is an optional query parameter named `q` (as in `http://127.0.0.1:8000/items/foo?q=somequery`) for `GET` requests.
-    * As the `q` parameter is declared with `= None`, it is optional.
-    * Without the `None` it would be required (as is the body in the case with `PUT`).
-* For `PUT` requests to `/items/{item_id}`, Read the body as JSON:
-    * Check that it has a required attribute `name` that should be a `str`.
-    * Check that it has a required attribute `price` that has to be a `float`.
-    * Check that it has an optional attribute `is_offer`, that should be a `bool`, if present.
-    * All this would also work for deeply nested JSON objects.
-* Convert from and to JSON automatically.
-* Document everything with OpenAPI, that can be used by:
-    * Interactive documentation systems.
-    * Automatic client code generation systems, for many languages.
-* Provide 2 interactive documentation web interfaces directly.
+* `GET` və `PUT` sorğuları üçün `item_id`-nin <abbr title="Yol: Path">yolda</abbr> olub-olmadığını yoxlayacaq.
+* `item_id`-nin `GET` və `PUT` sorğuları üçün növünün `int` olduğunu yoxlayacaq.
+    * Əgər `int` deyilsə, səbəbini göstərən bir xəta mesajı göstərəcəkdir.
+* <abbr title="Məcburi olmayan: Optional">məcburi olmayan</abbr> `q` parametrinin `GET` (`http://127.0.0.1:8000/items/foo?q=somequery` burdakı kimi) sorğusu içərisində olub olmadığını yoxlayacaq.
+    * `q` parametrini `= None` ilə yaratdığımız üçün, <abbr title="Məcburi olmayan: Optional">məcburi olmayan</abbr> parametr olacaq.
+    * Əgər `None` olmasaydı, bu məcburi parametr olardı (`PUT` metodunun gövdəsində olduğu kimi).
+* `PUT` sorğusu üçün, `/items/{item_id}` gövdəsini JSON olaraq oxuyacaq:
+    * `name` adında məcburi bir parametr olub olmadığını və əgər varsa, tipinin `str` olub olmadığını yoxlayacaq.
+    * `price` adında məcburi bir parametr olub olmadığını və əgər varsa, tipinin `float` olub olmadığını yoxlayacaq.
+    * `is_offer` adında <abbr title="Məcburi olmayan: Optional">məcburi olmayan</abbr> bir parametr olub olmadığını və əgər varsa, tipinin `float` olub olmadığını yoxlayacaq.
+    * Bütün bunlar ən dərin JSON obyektlərində belə işləyəcək.
+* Məlumatların JSON-a və JSON-un Python obyektinə çevrilməsi avtomatik həyata keçiriləcək.
+* Hər şeyi OpenAPI ilə uyğun olacaq şəkildə avtomatik olaraq sənədləşdirəcək və onları aşağıdakı kimi istifadə edə biləcək:
+    * İnteraktiv sənədləşmə sistemləri.
+    * Bir çox proqramlaşdırma dilləri üçün avtomatlaşdırılmış <abbr title="Müştəri: Client">müştəri</abbr> kodu yaratma sistemləri.
+* 2 interaktiv sənədləşmə veb interfeysini birbaşa təmin edəcək.
 
 ---
 
-We just scratched the surface, but you already get the idea of how it all works.
+Yeni başlamışıq, amma siz artıq işin məntiqini başa düşmüsünüz.
 
-Try changing the line with:
+İndi aşağıdakı sətri dəyişdirməyə çalışın:
 
 ```Python
     return {"item_name": item.name, "item_id": item_id}
 ```
 
-...from:
+...bundan:
 
 ```Python
         ... "item_name": item.name ...
 ```
 
-...to:
+...buna:
 
 ```Python
         ... "item_price": item.price ...
 ```
 
-...and see how your editor will auto-complete the attributes and know their types:
+...və redaktorun məlumat tiplərini bildiyini və avtomatik tamaladığını görəcəksiniz:
 
 ![editor support](https://fastapi.tiangolo.com/img/vscode-completion.png)
 
-For a more complete example including more features, see the <a href="https://fastapi.tiangolo.com/tutorial/">Tutorial - User Guide</a>.
+Daha çox funksiyaya malik daha dolğun nümunə üçün <a href="https://fastapi.tiangolo.com/az/tutorial/">Öyrədici - İstifadəçi Təlimatı</a> səhifəsinə baxa bilərsiniz.
 
-**Spoiler alert**: the tutorial - user guide includes:
+**Spoiler xəbərdarlığı**: Öyrədici - istifadəçi təlimatına bunlar daxildir:
 
-* Declaration of **parameters** from other different places as: **headers**, **cookies**, **form fields** and **files**.
-* How to set **validation constraints** as `maximum_length` or `regex`.
-* A very powerful and easy to use **<abbr title="also known as components, resources, providers, services, injectables">Dependency Injection</abbr>** system.
-* Security and authentication, including support for **OAuth2** with **JWT tokens** and **HTTP Basic** auth.
-* More advanced (but equally easy) techniques for declaring **deeply nested JSON models** (thanks to Pydantic).
-* Many extra features (thanks to Starlette) as:
+* **Parametrlərin**, <abbr title="Başlıq: Header">**başlıqlar**</abbr>, <abbr title="Çərəz: Cookie">çərəzlər</abbr>, **forma sahələri** və **fayllar** olaraq müəyyən edilməsi.
+* `maximum_length` və ya `regex` kimi **doğrulama məhdudiyyətlərinin** necə təyin ediləcəyi.
+* Çox güclü və istifadəsi asan **<abbr title="components, resources, providers, services, injectables olaraq da bilinir">Dependency Injection</abbr>** sistemi.
+* Təhlükəsizlik və autentifikasiya, **JWT tokenləri** ilə **OAuth2** dəstəyi və **HTTP Basic** autentifikasiyası.
+* **çox dərin JSON modellərini** müəyyən etmək üçün daha irəli səviyyə (lakin eyni dərəcədə asan) üsullar (Pydantic sayəsində).
+* <a href="https://strawberry.rocks" class="external-link" target="_blank">Strawberry</a> və digər kitabxanalar ilə **GraphQL** inteqrasiyası.
+* Digər əlavə xüsusiyyətlər (Starlette sayəsində):
     * **WebSockets**
-    * **GraphQL**
-    * extremely easy tests based on `requests` and `pytest`
+    * HTTPX və `pytest` sayəsində çox asan testlər
     * **CORS**
     * **Cookie Sessions**
-    * ...and more.
+    * ...və daha çoxu.
 
-## Performance
+## Performans
 
-Independent TechEmpower benchmarks show **FastAPI** applications running under Uvicorn as <a href="https://www.techempower.com/benchmarks/#section=test&runid=7464e520-0dc2-473d-bd34-dbdfd7e85911&hw=ph&test=query&l=zijzen-7" class="external-link" target="_blank">one of the fastest Python frameworks available</a>, only below Starlette and Uvicorn themselves (used internally by FastAPI). (*)
+Müstəqil TechEmpower meyarları göstərir ki, Uvicorn üzərində işləyən **FastAPI** proqramları <a href="https://www.techempower.com/benchmarks/#section=test&runid=7464e520-0dc2-473d-bd34-dbdfd7e85911&hw=ph&test=query&l=zijzen-7" class="external-link" target="_blank">ən sürətli Python kitabxanalarından biridir</a>, yalnız Starlette və Uvicorn-un özündən yavaşdır, ki FastAPI bunların üzərinə qurulmuş bir framework-dür. (*)
 
-To understand more about it, see the section <a href="https://fastapi.tiangolo.com/benchmarks/" class="internal-link" target="_blank">Benchmarks</a>.
+Ətraflı məlumat üçün bu bölməyə nəzər salın <a href="https://fastapi.tiangolo.com/az/benchmarks/" class="internal-link" target="_blank"><abbr title="Müqayisələr: Benchmarks">Müqayisələr</abbr></a>.
 
-## Optional Dependencies
+## Məcburi Olmayan Tələblər
 
-Used by Pydantic:
+Pydantic tərəfindən istifadə olunanlar:
 
-* <a href="https://github.com/esnme/ultrajson" target="_blank"><code>ujson</code></a> - for faster JSON <abbr title="converting the string that comes from an HTTP request into Python data">"parsing"</abbr>.
-* <a href="https://github.com/JoshData/python-email-validator" target="_blank"><code>email_validator</code></a> - for email validation.
+* <a href="https://github.com/JoshData/python-email-validator" target="_blank"><code>email-validator</code></a> - e-poçtun yoxlanılması üçün.
+* <a href="https://docs.pydantic.dev/latest/usage/pydantic_settings/" target="_blank"><code>pydantic-settings</code></a> - parametrlərin idarə edilməsi üçün.
+* <a href="https://docs.pydantic.dev/latest/usage/types/extra_types/extra_types/" target="_blank"><code>pydantic-extra-types</code></a> - Pydantic ilə istifadə edilə bilən əlavə tiplər üçün.
 
-Used by Starlette:
+Starlette tərəfindən istifadə olunanlar:
 
-* <a href="https://www.python-httpx.org" target="_blank"><code>httpx</code></a> - Required if you want to use the `TestClient`.
-* <a href="https://jinja.palletsprojects.com" target="_blank"><code>jinja2</code></a> - Required if you want to use the default template configuration.
-* <a href="https://andrew-d.github.io/python-multipart/" target="_blank"><code>python-multipart</code></a> - Required if you want to support form <abbr title="converting the string that comes from an HTTP request into Python data">"parsing"</abbr>, with `request.form()`.
-* <a href="https://pythonhosted.org/itsdangerous/" target="_blank"><code>itsdangerous</code></a> - Required for `SessionMiddleware` support.
-* <a href="https://pyyaml.org/wiki/PyYAMLDocumentation" target="_blank"><code>pyyaml</code></a> - Required for Starlette's `SchemaGenerator` support (you probably don't need it with FastAPI).
-* <a href="https://graphene-python.org/" target="_blank"><code>graphene</code></a> - Required for `GraphQLApp` support.
-* <a href="https://github.com/esnme/ultrajson" target="_blank"><code>ujson</code></a> - Required if you want to use `UJSONResponse`.
+* <a href="https://www.python-httpx.org" target="_blank"><code>httpx</code></a> - Əgər `TestClient` strukturundan istifadə edəcəksinizsə, tələb olunur.
+* <a href="https://jinja.palletsprojects.com" target="_blank"><code>jinja2</code></a> - Standart <abbr title="Şablon: Template">şablon</abbr> konfiqurasiyasından istifadə etmək istəyirsinizsə, tələb olunur.
+* <a href="https://github.com/Kludex/python-multipart" target="_blank"><code>python-multipart</code></a> - `request.form()` ilə forma <abbr title="HTTP sorğusu ilə alınan string məlumatın Python obyektinə çevrilməsi">"çevirmə"</abbr> dəstəyindən istifadə etmək istəyirsinizsə, tələb olunur.
+* <a href="https://pythonhosted.org/itsdangerous/" target="_blank"><code>itsdangerous</code></a> - `SessionMiddleware` dəstəyi üçün tələb olunur.
+* <a href="https://pyyaml.org/wiki/PyYAMLDocumentation" target="_blank"><code>pyyaml</code></a> - `SchemaGenerator` dəstəyi üçün tələb olunur (Çox güman ki, FastAPI istifadə edərkən buna ehtiyacınız olmayacaq).
+* <a href="https://github.com/esnme/ultrajson" target="_blank"><code>ujson</code></a> - `UJSONResponse` istifadə etmək istəyirsinizsə, tələb olunur.
 
-Used by FastAPI / Starlette:
+Həm FastAPI, həm də Starlette tərəfindən istifadə olunur:
 
-* <a href="https://www.uvicorn.org" target="_blank"><code>uvicorn</code></a> - for the server that loads and serves your application.
-* <a href="https://github.com/ijl/orjson" target="_blank"><code>orjson</code></a> - Required if you want to use `ORJSONResponse`.
+* <a href="https://www.uvicorn.org" target="_blank"><code>uvicorn</code></a> - Yaratdığımız proqramı servis edəcək veb server kimi fəaliyyət göstərir.
+* <a href="https://github.com/ijl/orjson" target="_blank"><code>orjson</code></a> - `ORJSONResponse` istifadə edəcəksinizsə tələb olunur.
 
-You can install all of these with `pip install fastapi[all]`.
+Bütün bunları `pip install fastapi[all]` ilə quraşdıra bilərsiniz.
 
-## License
+## Lisenziya
 
-This project is licensed under the terms of the MIT license.
+Bu layihə MIT lisenziyasının şərtlərinə əsasən lisenziyalaşdırılıb.
